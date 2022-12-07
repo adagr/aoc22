@@ -60,9 +60,8 @@ protected:
         return numbers;
     }
     
-    template<typename T = std::string>
-    std::vector<T> getFromLine(const std::string& line, std::string delim) {
-        std::vector<T> data{};
+    std::vector<std::string> getFromLine(const std::string& line, std::string delim) {
+        std::vector<std::string> data{};
         auto s = line;
         while(true) {
             auto pos = s.find(delim);
